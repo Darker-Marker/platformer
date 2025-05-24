@@ -1,11 +1,5 @@
 package gamelogic;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Toolkit;
-import java.awt.event.KeyEvent;
-
 import gameengine.GameBase;
 import gameengine.graphics.MyWindow;
 import gameengine.input.KeyboardInputManager;
@@ -14,6 +8,10 @@ import gamelogic.level.Level;
 import gamelogic.level.LevelData;
 import gamelogic.level.PlayerDieListener;
 import gamelogic.level.PlayerWinListener;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 
 public class Main extends GameBase implements PlayerDieListener, PlayerWinListener, ScreenTransitionListener{
 	public static final int SCREEN_WIDTH = (int)Toolkit.getDefaultToolkit().getScreenSize().getWidth()-200;
@@ -46,7 +44,7 @@ public class Main extends GameBase implements PlayerDieListener, PlayerWinListen
 
 		levels = new LevelData[2];
 		try {
-			levels[0] = LeveldataLoader.loadLeveldata("/workspaces/platformer/workspace/maps/testMap.txt");
+			levels[0] = LeveldataLoader.loadLeveldata("/workspaces/platformer/workspace/maps/gasTest1.txt");
 			levels[1] = LeveldataLoader.loadLeveldata("/workspaces/platformer/workspace/maps/map1.txt");
 		} catch (Exception e) {
 			e.printStackTrace();

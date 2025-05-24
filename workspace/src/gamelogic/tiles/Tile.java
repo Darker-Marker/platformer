@@ -1,12 +1,10 @@
 package gamelogic.tiles;
 
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-
-import gameengine.GameObject;
 import gameengine.hitbox.RectHitbox;
 import gameengine.maths.Vector2D;
 import gamelogic.level.Level;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
 public class Tile{
 
@@ -33,7 +31,11 @@ public class Tile{
 		if(hitbox != null) hitbox.draw(g);		
 	}
 	
+	public void setImage(BufferedImage i)
+	{
+image = i;
 	
+	}
 	
 	//------------------------------------Getters
 	public boolean isSolid() {
